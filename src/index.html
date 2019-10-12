@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daily Journal</title>
-    <link rel="stylesheet" href="journal.css">
+    <link rel="stylesheet" href="styles/journal.css">
 </head>
+
 <body>
+    <!-- h1 element with page title -->
     <h1>Daily Journal</h1>
-    <form action="">
+    <form action="/action_page.php">
+
+        <!-- date field, makes a drop-down calendar to select a date- cool! -->
         <fieldset>
-            <label for="journalDate">Date of entry</label>
+            <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate">
         </fieldset>
+
+        <!-- concepts covered field, makes a single line text area -->
+        <fieldset>
+            <label for="conceptsCovered">Concepts Covered</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+        </fieldset>
+
+        <!-- journal entry field, multiple line text area -->
+        <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <textarea name="journalEntry" rows="2" cols="20"></textarea>
+        </fieldset>
+
+        <!-- mood for the day selector -->
+        <fieldset>
+            <label for="mood">Mood For The Day</label>
+            <select name="mood" id="mood">
+                <option value="tired">Tired</option>
+                <option value="terror">Abject Terror</option>
+                <option value="ennui">Ennui</option>
+                <option value="numb">Numb</option>
+                <option value="dejavu">Deja Vu</option>
+                <option value="justok">Just OK</option>
+                <option value="anxious">Anxious</option>
+                <option value="super">Supercalifragilisticexpialidocious</option>
+                <option value="meh">Meh</option>
+            </select>
+        </fieldset>
+        <!-- Button, button, who's got the button? We do! This is a submit button. -->
+        <input type="submit" value="Make it so!">
+
     </form>
 </body>
+
 </html>
