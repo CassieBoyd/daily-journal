@@ -30,3 +30,19 @@ journalEntries.push(journalEntryThree)
 
 // console logging Journal Entries to make sure it works
 console.log("Journal Entries", journalEntries)
+
+const entryLog = document.querySelector(".entryLog")
+
+const renderJournalEntries = (entries) => {
+    entries.forEach((entry) => { 
+        entryLog.innerHTML += 
+        `
+    <section>
+        <h3>${entry.conceptsCovered}</h3>
+        <p>${entry.journalEntry}</p>
+        <p>${entry.mood}</p>
+        <p>${entry.journalDate}</p>
+      </section>`
+    })
+} 
+renderJournalEntries(journalEntries)
