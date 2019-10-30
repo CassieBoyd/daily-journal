@@ -34,7 +34,15 @@ console.log("Journal Entries", journalEntries)
 const entryLog = document.querySelector(".entryLog")
 
 const renderJournalEntries = (entries) => {
-    journalEntries.forEach((entry) => { `
-    `
+    entries.forEach((entry) => { 
+        entryLog.innerHTML += 
+        `
+    <section>
+        <h3>${entry.conceptsCovered}</h3>
+        <p>${entry.journalEntry}</p>
+        <p>${entry.mood}</p>
+        <p>${entry.journalDate}</p>
+      </section>`
     })
-}
+} 
+renderJournalEntries(journalEntries)
